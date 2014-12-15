@@ -28,7 +28,8 @@ namespace ConsoleApplication5
            //Console.WriteLine(oo.ToString());
             //testBoxing();
             //ListExample();
-            testExtentionMethod();
+            //testExtentionMethod();
+            CheckZip();
             Console.ReadLine();
             //print();
            
@@ -146,6 +147,74 @@ namespace ConsoleApplication5
             totalCharWithoutSpace = userSentance.TotalCharWithoutSpace();
             Console.WriteLine("Total number of character is :" + totalCharWithoutSpace);
             Console.ReadKey();
+        }
+
+        private static void SimpleQuery()
+        {
+            var primes = new List<int> { 1, 2, 3, 5, 7, 11, 13, 17, 19, 23 };
+
+            IEnumerable<int> query = from val in primes
+                                     where val < 13
+                                     select val;
+
+            foreach (var val in query)
+            {
+                Console.WriteLine(val);           
+            }
+                
+
+            var methodQuery = primes.Where(x => x < 13);
+
+            foreach (var val in methodQuery)
+            {
+                Console.WriteLine(val);
+
+            }
+             
+        }
+
+        private static void ContainsAndAnySample()
+        {
+            var listOne = Enumerable.Empty<int>();
+            var listTwo = Enumerable.Range(1, 20);
+
+            bool listOneEmpty = listOne.Any();
+            bool listTwoEmpty = listTwo.Any();
+
+            Console.WriteLine("list one has members? " + listOneEmpty +
+               " list two has members? " + listTwoEmpty);
+
+            Console.WriteLine("listTwo has 12? " + listTwo.Contains(12) +
+               " listTwo has 30? " + listTwo.Contains(30));
+        }
+
+        private static void PaginationSample()
+        {
+            var bigList = Enumerable.Range(1, 20);
+            var littleList = bigList.Take(5).Select(x => x * 10);
+            foreach (var i in littleList)
+            {
+                Console.WriteLine(i);
+            }
+               
+        }
+
+        private static void CheckZip()
+        {
+            string[] postalCodes = { "AL", "AK", "AZ", "AR", 
+                                   "CA", "CO", "CT", "DE", "FL" };
+
+            string[] states = { "Alabama", "Alaska", "Arizona", 
+                              "Arkansas", "California", "Colorodo", 
+                              "Connecticut", "Deleware", "Florida" };
+            
+            var statesWithCodes = postalCodes.Zip(states, (code, state) =>
+               code + ": " + state);
+
+            foreach (var stateWithCode in statesWithCodes)
+            {
+                Console.WriteLine(stateWithCode);
+            }
         }
        
     }
