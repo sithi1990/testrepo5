@@ -46,6 +46,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeList.cs" />
     <Compile Include="EmployeeNamComparer.cs" />
+    <Compile Include="Extention.cs" />
     <Compile Include="IMan.cs" />
     <Compile Include="Man.cs" />
     <Compile Include="Program.cs" />

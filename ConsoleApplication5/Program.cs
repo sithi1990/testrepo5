@@ -27,7 +27,8 @@ namespace ConsoleApplication5
 
            //Console.WriteLine(oo.ToString());
             //testBoxing();
-            ListExample();
+            //ListExample();
+            testExtentionMethod();
             Console.ReadLine();
             //print();
            
@@ -100,6 +101,14 @@ namespace ConsoleApplication5
             
         }
 
+
+        private void LambdaEcpression()
+        {
+            List<int> elements = new List<int>() { 10,20,30,40};
+            int OddIndex = elements.FindIndex(x => x % 2 == 0);
+            Console.WriteLine(OddIndex);
+        }
+
         private static void ListExample()
         {
             List<Employee> emps = new List<Employee>();
@@ -123,6 +132,20 @@ namespace ConsoleApplication5
             {
                 Console.WriteLine(emp);
             }
+        }
+
+        private static void testExtentionMethod()
+        {
+            string userSentance = string.Empty;
+            int totalWords = 0;
+            int totalCharWithoutSpace = 0;
+            Console.WriteLine("Enter the your sentance");
+            userSentance = Console.ReadLine();
+
+            //calling Extension Method to count character
+            totalCharWithoutSpace = userSentance.TotalCharWithoutSpace();
+            Console.WriteLine("Total number of character is :" + totalCharWithoutSpace);
+            Console.ReadKey();
         }
        
     }
