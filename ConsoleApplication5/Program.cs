@@ -103,14 +103,15 @@ namespace ConsoleApplication5
         private static void ListExample()
         {
             List<Employee> emps = new List<Employee>();
-            emps.Add(new Employee(6, "Emp 1", 1000));
-            emps.Add(new Employee(2, "Emp 2", 2000));
+            emps.Add(new Employee(6, "Emp 6", 1000));
+            emps.Add(new Employee(2, "Emp 7", 2000));
             emps.Add(new Employee(3, "Emp 3", 3000));
             emps.Add(new Employee(4, "Emp 4", 4000));
             emps.Add(new Employee(5, "Emp 5", 5000));
             //emps.Sort();
             //IEnumerator<Employee> enamurator = emps.GetEnumerator();
-            emps.Sort();
+            EmployeeNamComparer namecomp = new EmployeeNamComparer();
+            emps.Sort(namecomp);
             //while(enamurator.MoveNext())
             //{
                // Console.WriteLine(enamurator.Current);
