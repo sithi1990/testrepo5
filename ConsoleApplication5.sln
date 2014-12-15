@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication5", "ConsoleApplication5\ConsoleApplication5.csproj", "{375D0D10-B62D-4281-854F-616734A25C7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingUnboxing", "BoxingUnboxing\BoxingUnboxing.csproj", "{65F52F00-450E-4A3F-8649-BB30D8681232}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{375D0D10-B62D-4281-854F-616734A25C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{375D0D10-B62D-4281-854F-616734A25C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{375D0D10-B62D-4281-854F-616734A25C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F52F00-450E-4A3F-8649-BB30D8681232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F52F00-450E-4A3F-8649-BB30D8681232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F52F00-450E-4A3F-8649-BB30D8681232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F52F00-450E-4A3F-8649-BB30D8681232}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
